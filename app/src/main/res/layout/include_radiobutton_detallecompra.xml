@@ -5,12 +5,14 @@
     android:orientation="vertical">
 
     <RadioGroup
+        android:id="@+id/rbGrupoDetalle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="9">
 
         <RadioButton
+            android:id="@+id/rbDetalleCompra1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
@@ -18,6 +20,7 @@
             android:textColor="@color/blanco" />
 
         <RadioButton
+            android:id="@+id/rbDetalleCompra2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
@@ -25,6 +28,7 @@
             android:textColor="@color/blanco" />
 
         <RadioButton
+            android:id="@+id/rbDetalleCompra3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"

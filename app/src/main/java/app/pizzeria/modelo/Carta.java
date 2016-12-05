@@ -18,15 +18,9 @@ public class Carta {
     private double precio_grande;
     private double precio_familiar;
     private double precio_super_familiar;
+    private String detalle;
 
-    public Carta(int id_carta, int tipo_carta, String nombre_carta, int imagen_carta) {
-        this.id_carta = id_carta;
-        this.tipo_carta = tipo_carta;
-        this.nombre_carta = nombre_carta;
-        this.imagen_carta = imagen_carta;
-    }
-
-    public Carta(int id_carta, int tipo_carta, String nombre_carta, int imagen_carta, double precio_grande, double precio_familiar, double precio_super_familiar) {
+    public Carta(int id_carta, int tipo_carta, String nombre_carta, int imagen_carta, double precio_grande, double precio_familiar, double precio_super_familiar, String detalle) {
         this.id_carta = id_carta;
         this.tipo_carta = tipo_carta;
         this.nombre_carta = nombre_carta;
@@ -34,15 +28,17 @@ public class Carta {
         this.precio_grande = precio_grande;
         this.precio_familiar = precio_familiar;
         this.precio_super_familiar = precio_super_familiar;
+        this.detalle = detalle;
     }
 
-    public Carta(int tipo_carta, String nombre_carta, int imagen_carta, double precio_grande, double precio_familiar, double precio_super_familiar) {
+    public Carta(int tipo_carta, String nombre_carta, int imagen_carta, double precio_grande, double precio_familiar, double precio_super_familiar, String detalle) {
         this.tipo_carta = tipo_carta;
         this.nombre_carta = nombre_carta;
         this.imagen_carta = imagen_carta;
         this.precio_grande = precio_grande;
         this.precio_familiar = precio_familiar;
         this.precio_super_familiar = precio_super_familiar;
+        this.detalle = detalle;
     }
 
     public int getId_carta() {
@@ -99,5 +95,13 @@ public class Carta {
 
     public void setPrecio_super_familiar(double precio_super_familiar) {
         this.precio_super_familiar = precio_super_familiar;
+    }
+
+    public String getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(String detalle) {
+        this.detalle = detalle;
     }
 }

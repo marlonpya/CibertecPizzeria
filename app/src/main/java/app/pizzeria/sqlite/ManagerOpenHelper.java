@@ -15,7 +15,7 @@ public class ManagerOpenHelper extends SQLiteOpenHelper{
     public ManagerOpenHelper(Context context) {
         super(context, Querys.DB_NOMBRE, null, Querys.DB_VERSION);
     }
-
+    
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Querys.CREATE_TB_USUARIO);

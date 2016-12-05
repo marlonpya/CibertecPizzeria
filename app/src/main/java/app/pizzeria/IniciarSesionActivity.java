@@ -18,6 +18,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
     private EditText etUsuario, etContrasenia;
     private TextView tvOlvidasteContrasenia;
     private Toolbar toolbar;
+
     private QuerysSQL sql;
 
     @Override

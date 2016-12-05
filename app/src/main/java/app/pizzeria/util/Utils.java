@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 /**
  * Created by marlonpya on 24/11/16.
  */
@@ -20,7 +22,7 @@ public class Utils {
         activity.getSupportActionBar().setTitle(titulo);
     }
 
-    public static void setSpinner(Context context, Spinner spinner, String[] array) {
+    public static void setSpinner(Context context, Spinner spinner, ArrayList<String> array) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_dropdown_item, array);
         spinner.setAdapter(adapter);
     }

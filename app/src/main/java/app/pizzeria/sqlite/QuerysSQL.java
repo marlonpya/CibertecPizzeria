@@ -83,12 +83,36 @@ public class QuerysSQL {
                                                 cursor.getInt(cursor.getColumnIndex(Querys.CAR_IMAGEN)),
                                                 cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_GRANDE)),
                                                 cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_FAMILIAR)),
-                                                cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_S_FAMILIAR)));
+                                                cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_S_FAMILIAR)),
+                                                cursor.getString(cursor.getColumnIndex(Querys.CAR_INGREDIENTES)));
                         list_carta.add(carta);
                     } while (cursor.moveToNext());
                 }
             }
         }
         return list_carta;
+    }
+
+    public Carta getCartaPorId(int id) {
+        Carta carta = null;
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(" SELECT * " +
+                                    " FROM "+Querys.TB_CARTA +
+                                    " WHERE "+Querys.CAR_ID +"="+id,null);
+        if (cursor != null) {
+            if (cursor.getCount() > 0) {
+                if (cursor.moveToFirst()) {
+                    carta = new Carta(cursor.getInt(cursor.getColumnIndex(Querys.CAR_ID)),
+                            cursor.getInt(cursor.getColumnIndex(Querys.CAR_TIPO)),
+                            cursor.getString(cursor.getColumnIndex(Querys.CAR_NOMBRE)),
+                            cursor.getInt(cursor.getColumnIndex(Querys.CAR_IMAGEN)),
+                            cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_GRANDE)),
+                            cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_FAMILIAR)),
+                            cursor.getDouble(cursor.getColumnIndex(Querys.CAR_PRE_S_FAMILIAR)),
+                            cursor.getString(cursor.getColumnIndex(Querys.CAR_INGREDIENTES)));
+                }
+            }
+        }
+        return carta;
     }
 }

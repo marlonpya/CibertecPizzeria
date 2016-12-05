@@ -45,9 +45,9 @@ public class RegistrarActivity extends AppCompatActivity {
         rbHombre = (RadioButton) findViewById(R.id.rbHombre);
         rbMujer = (RadioButton) findViewById(R.id.rbMujer);
 
-        Utils.setSpinner(this, spDia, Constantes.array_dias);
-        Utils.setSpinner(this, spMes, Constantes.array_mes);
-        Utils.setSpinner(this, spAnio, Constantes.array_anios);
+        Utils.setSpinner(this, spDia, Constantes.getArrayDias());
+        Utils.setSpinner(this, spMes, Constantes.getArrayMeses());
+        Utils.setSpinner(this, spAnio, Constantes.getArrayAnios());
         Utils.setToolbar(toolbar, RegistrarActivity.this, "Registrar Usuario");
     }
 

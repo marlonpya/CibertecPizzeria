@@ -46,16 +46,6 @@ public class PrincipalActivity extends AppCompatActivity
         navigationView.getMenu().getItem(0).setChecked(true);
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -96,7 +86,7 @@ public class PrincipalActivity extends AppCompatActivity
         new AlertDialog.Builder(PrincipalActivity.this)
                 .setTitle(R.string.app_name)
                 .setMessage("993-222-019 Atención\n" +
-                        "Señorita Dayana")
+                        "Señorita Karina")
                 .show();
     }
 
@@ -107,10 +97,22 @@ public class PrincipalActivity extends AppCompatActivity
                 .setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        onBackPressed();
+                        PrincipalActivity.super.onBackPressed();
                     }
                 })
                 .setNegativeButton("CANCELAR", null)
                 .show();
     }
+
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            cerrarSesion();
+        }
+    }
+
 }

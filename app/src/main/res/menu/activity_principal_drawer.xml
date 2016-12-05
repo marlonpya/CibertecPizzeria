@@ -16,7 +16,7 @@
             android:title="Ofertas" />
         <item
             android:id="@+id/item_contacto"
-            android:title="Contacto"></item>
+            android:title="Contacto"/>
     </group>
 
     <item android:title="Usuario">

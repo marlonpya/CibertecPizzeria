@@ -17,8 +17,9 @@ public class Querys {
     public static final String USU_MES          = "USU_MES";
     public static final String USU_ANIO         = "USU_ANIO";
     public static final String USU_GENERO       = "USU_GENERO";
+
     public static final String CREATE_TB_USUARIO= "CREATE TABLE IF NOT EXISTS " +TB_USUARIO+ "(" +
-            USU_ID + " INTEGER AUTO_INCREMENT," +
+            USU_ID + " INTEGER," +
             USU_USUARIO + " TEXT NOT NULL," +
             USU_CONTRASENIA + " TEXT NOT NULL," +
             USU_DIA + " TEXT," +
@@ -35,14 +36,16 @@ public class Querys {
     public static final String CAR_PRE_GRANDE   = "CAR_PRE_GRANDE";
     public static final String CAR_PRE_FAMILIAR = "CAR_PRE_FAMILIAR";
     public static final String CAR_PRE_S_FAMILIAR = "CAR_PRE_S_FAMILIAR";
+    public static final String CAR_INGREDIENTES = "CAR_INGREDIENTES";
     public static final String CREATE_TB_CARTA  = "CREATE TABLE IF NOT EXISTS " + TB_CARTA + "(" +
-            CAR_ID + " INTEGER AUTO_INCREMENT," +
+            CAR_ID + " INTEGER," +
             CAR_TIPO + " INTEGER NOT NULL," +
             CAR_NOMBRE + " TEXT," +
             CAR_IMAGEN + " INTEGER," +
             CAR_PRE_GRANDE + " DECIMAL," +
             CAR_PRE_FAMILIAR + " DECIMAL," +
             CAR_PRE_S_FAMILIAR + " DECIMAL," +
+            CAR_INGREDIENTES + " TEXT," +
             "PRIMARY KEY (" + CAR_ID + "));";
 
 }

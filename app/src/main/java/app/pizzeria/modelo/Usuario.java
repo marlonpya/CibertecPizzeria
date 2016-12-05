@@ -14,6 +14,8 @@ public class Usuario {
     private String anio;
     private String genero;
 
+    public Usuario() {}
+
     public Usuario(int id, String usuario, String contrasenia, String dia, String mes, String anio, String genero) {
         this.id = id;
         this.usuario = usuario;
